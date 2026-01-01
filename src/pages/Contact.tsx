@@ -1,5 +1,5 @@
+import { useState, FormEvent, ChangeEvent } from 'react';
 import { Instagram, MessageCircle } from 'lucide-react';
-import { useState, FormEvent } from 'react';
 
 export default function Contact() {
   const phoneNumber = import.meta.env.VITE_PHONE_NUMBER || '212000000000';
@@ -10,7 +10,7 @@ export default function Contact() {
     service: ''
   });
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
   };
@@ -36,7 +36,7 @@ export default function Contact() {
               type="text"
               id="name"
               value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, name: e.target.value })}
               className="w-full px-6 py-4 border border-gray-200 text-gray-900 focus:outline-none focus:border-gray-400 transition-colors"
               required
             />
@@ -50,7 +50,7 @@ export default function Contact() {
               type="email"
               id="email"
               value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, email: e.target.value })}
               className="w-full px-6 py-4 border border-gray-200 text-gray-900 focus:outline-none focus:border-gray-400 transition-colors"
               required
             />
@@ -63,7 +63,7 @@ export default function Contact() {
             <select
               id="service"
               value={formData.service}
-              onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+              onChange={(e: ChangeEvent<HTMLSelectElement>) => setFormData({ ...formData, service: e.target.value })}
               className="w-full px-6 py-4 border border-gray-200 text-gray-900 focus:outline-none focus:border-gray-400 transition-colors bg-white"
               required
             >
