@@ -12,7 +12,35 @@ export default function Contact() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Validate form data
+    if (!formData.name || !formData.email || !formData.service) {
+      alert('Veuillez remplir tous les champs');
+      return;
+    }
+    
+    // Create a prefilled WhatsApp message
+    const serviceLabel = {
+      management: 'Social Media Management',
+      content: 'Content Creation',
+      growth: 'Growth & Engagement',
+      analytics: 'Analytics & Reporting',
+      custom: 'Forfait Personnalisé'
+    }[formData.service] || formData.service;
+    
+    const message = `Bonjour, je suis intéressé par vos services.\n\nNom: ${formData.name}\nEmail: ${formData.email}\nService: ${serviceLabel}`;
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp
+    window.open(whatsappUrl, '_blank');
+    
+    // Reset form
+    setFormData({
+      name: '',
+      email: '',
+      service: ''
+    });
   };
 
   return (
