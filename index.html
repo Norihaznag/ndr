@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- Character encoding and viewport for responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary Meta Tags for SEO -->
+    <title>NDR Management - Agence de Marketing Digital</title>
+    <meta name="title" content="NDR Management - Agence de Marketing Digital" />
+    <meta
+      name="description"
+      content="Boostez votre présence sur les réseaux sociaux avec NDR Management. Gestion de réseaux sociaux, création de contenu, analytics et engagement."
+    />
+    <meta
+      name="keywords"
+      content="marketing digital, réseaux sociaux, gestion réseaux, contenu créatif, engagement, analytics"
+    />
+    <meta name="author" content="NDR Management" />
+    <meta name="language" content="fr" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com/" />
+    <meta property="og:title" content="NDR Management - Agence de Marketing Digital" />
+    <meta
+      property="og:description"
+      content="Boostez votre présence sur les réseaux sociaux avec NDR Management"
+    />
+    <meta property="og:image" content="https://your-domain.com/og-image.png" />
+    <meta property="og:site_name" content="NDR Management" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://your-domain.com/" />
+    <meta name="twitter:title" content="NDR Management - Agence de Marketing Digital" />
+    <meta
+      name="twitter:description"
+      content="Boostez votre présence sur les réseaux sociaux avec NDR Management"
+    />
+    <meta name="twitter:image" content="https://your-domain.com/og-image.png" />
+
+    <!-- Canonical URL for SEO -->
+    <link rel="canonical" href="https://your-domain.com/" />
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co; img-src 'self' data: https:; media-src 'self' https:;" />
+
+    <!-- Web App Meta -->
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    <meta name="apple-mobile-web-app-title" content="NDR Management" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Favicon and icons -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Preconnect to external domains for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    />
+
+    <!-- Font stylesheet with fallback -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prefetch DNS for third-party services -->
+    <link rel="dns-prefetch" href="//wa.me" />
+    <link rel="dns-prefetch" href="//instagram.com" />
+
+    <!-- Accessibility Skip Link (visually hidden, keyboard accessible) -->
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .sr-only:focus,
+      .sr-only:active {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Skip to main content link for keyboard users -->
+    <a href="#main-content" class="sr-only">Sauter au contenu principal</a>
+
+    <!-- React app root -->
+    <div id="root"></div>
+
+    <!-- No-script fallback with semantic structure -->
+    <noscript>
+      <div style="text-align: center; padding: 2rem; background-color: #fef3c7; border: 1px solid #fcd34d; border-radius: 0.5rem; margin: 1rem; font-family: system-ui, sans-serif;">
+        <h1 style="color: #92400e; margin: 0 0 0.5rem 0;">JavaScript Requis</h1>
+        <p style="color: #b45309; margin: 0;">
+          Cette application nécessite JavaScript pour fonctionner correctement. Veuillez activer JavaScript dans les paramètres de votre navigateur.
+        </p>
+      </div>
+    </noscript>
+
+    <!-- Main application script with preload hint -->
+    <script type="module" src="/src/main.tsx" defer></script>
+
+    <!-- Service Worker registration for PWA -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/sw.js', { scope: '/' })
+            .then((reg) => {
+              console.log('Service Worker registered successfully:', reg);
+            })
+            .catch((err) => {
+              console.log('Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
