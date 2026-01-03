@@ -46,23 +46,13 @@
     <!-- Security Headers -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <meta http-equiv="content-security-policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.supabase.co; img-src 'self' data: https:; media-src 'self' https:;" />
 
     <!-- Web App Meta -->
-    <meta name="theme-color" content="#FFFFFF" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
-    <meta name="apple-mobile-web-app-title" content="NDR Management" />
-
-    <!-- PWA Manifest -->
-    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#121212" />
+    <meta name="color-scheme" content="dark" />
 
     <!-- Favicon and icons -->
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -131,21 +121,5 @@
 
     <!-- Main application script with preload hint -->
     <script type="module" src="/src/main.tsx" defer></script>
-
-    <!-- Service Worker registration for PWA -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker
-            .register('/sw.js', { scope: '/' })
-            .then((reg) => {
-              console.log('Service Worker registered successfully:', reg);
-            })
-            .catch((err) => {
-              console.log('Service Worker registration failed:', err);
-            });
-        });
-      }
-    </script>
   </body>
 </html>

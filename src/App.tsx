@@ -1,15 +1,13 @@
-import { useState, useEffect, Suspense, lazy } from 'react';
+import { useState, useEffect } from 'react';
 import { updateMetaTags, preloadResources, initLazyLoading } from './utils/seo';
-import { updatePageMeta, PageLoader } from './utils/router';
+import { updatePageMeta } from './utils/router';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-
-// Lazy load page components for better performance
-const Home = lazy(() => import('./pages/Home'));
-const Services = lazy(() => import('./pages/Services'));
-const Pricing = lazy(() => import('./pages/Pricing'));
-const About = lazy(() => import('./pages/About'));
-const Contact = lazy(() => import('./pages/Contact'));
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Pricing from './pages/Pricing';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -58,20 +56,18 @@ function App() {
   return (
     <>
       {/* Semantic HTML structure for accessibility */}
-      <div className="min-h-screen bg-white flex flex-col">
+      <div className="min-h-screen bg-charcoal text-soft-white flex flex-col">
         <Navigation currentPage={currentPage} onNavigate={handleNavigate} />
-        <Suspense fallback={<PageLoader />}>
-          <main id="main-content" className="flex-1 mt-20">
-            {renderPage()}
-          </main>
-        </Suspense>
+        <main id="main-content" className="flex-1 mt-20">
+          {renderPage()}
+        </main>
         <Footer />
       </div>
 
       {/* No-script fallback for accessibility */}
       <noscript>
-        <div className="p-6 text-center bg-yellow-50 border border-yellow-200">
-          <p className="text-yellow-800">
+        <div className="p-6 text-center bg-bronze text-soft-white border border-gold">
+          <p>
             Cette application nécessite JavaScript pour fonctionner correctement.
           </p>
         </div>

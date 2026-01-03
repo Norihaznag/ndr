@@ -27,13 +27,13 @@ export default function Pricing({ onNavigate }: PricingProps) {
   ];
 
   return (
-    <div className="bg-white pt-32 pb-24">
+    <div className="bg-charcoal pt-32 pb-24">
       <div className="max-w-6xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-24">
-          <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-5xl md:text-6xl font-semibold text-soft-white tracking-tight mb-6">
             Tarifs
           </h1>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+          <p className="text-xl text-warm-gray max-w-2xl mx-auto">
             Des forfaits transparents adaptés à vos besoins
           </p>
         </div>
@@ -42,20 +42,20 @@ export default function Pricing({ onNavigate }: PricingProps) {
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className="border border-gray-200 p-12 bg-white hover:border-gray-300 transition-colors"
+              className="border border-gold p-12 bg-graphite hover:border-soft-white transition-colors"
             >
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-2xl font-semibold text-soft-white mb-4">
                 {pkg.name}
               </h3>
-              <p className="text-sm text-gray-500 mb-8">
+              <p className="text-sm text-warm-gray mb-8">
                 {pkg.description}
               </p>
-              <div className="text-4xl font-semibold text-gray-900 mb-8">
+              <div className="text-4xl font-semibold text-gold mb-8">
                 {pkg.price}
               </div>
               <button
                 onClick={() => onNavigate('contact')}
-                className="w-full bg-blue-600 text-white px-8 py-4 text-base font-medium hover:bg-blue-700 transition-colors"
+                className="w-full bg-gold text-charcoal px-8 py-4 text-base font-semibold hover:bg-bronze transition-colors"
               >
                 Choisir
               </button>
@@ -64,12 +64,12 @@ export default function Pricing({ onNavigate }: PricingProps) {
         </div>
 
         <div className="mt-24 text-center">
-          <p className="text-gray-500 mb-8">
+          <p className="text-warm-gray mb-8">
             Besoin d'un forfait personnalisé ?
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="bg-gray-900 text-white px-10 py-4 text-base font-medium hover:bg-gray-800 transition-colors"
+            className="bg-gold text-charcoal px-10 py-4 text-base font-semibold hover:bg-bronze transition-colors"
           >
             Contactez-nous
           </button>

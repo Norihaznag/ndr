@@ -14,14 +14,20 @@ export default {
         ],
       },
       colors: {
-        // Custom color palette for better branding
-        primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          900: '#0c2d6b',
-        },
+        // NDR Elegant Dark Theme
+        charcoal: '#121212',
+        gold: '#D4AF37',
+        'soft-white': '#F5F5F5',
+        'warm-gray': '#B0B0B0',
+        bronze: '#A67C00',
+        'graphite': '#2C2C2C',
+      },
+      backgroundColor: {
+        dark: '#121212',
+      },
+      textColor: {
+        light: '#F5F5F5',
+        muted: '#B0B0B0',
       },
       spacing: {
         safe: 'max(1rem, env(safe-area-inset-bottom))',

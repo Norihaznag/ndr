@@ -29,13 +29,13 @@ export default function Services({ onNavigate }: ServicesProps) {
   ];
 
   return (
-    <div className="bg-white pt-32 pb-24">
+    <div className="bg-charcoal pt-32 pb-24">
       <div className="max-w-5xl mx-auto px-6 lg:px-12">
         <div className="text-center mb-24">
-          <h1 className="text-5xl md:text-6xl font-semibold text-gray-900 tracking-tight mb-6">
+          <h1 className="text-5xl md:text-6xl font-semibold text-soft-white tracking-tight mb-6">
             Nos Services
           </h1>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+          <p className="text-xl text-warm-gray max-w-2xl mx-auto">
             Des solutions complètes pour votre présence digitale
           </p>
         </div>
@@ -49,15 +49,15 @@ export default function Services({ onNavigate }: ServicesProps) {
               } gap-16 items-center`}
             >
               <div className="flex-1 flex justify-center">
-                <div className="w-32 h-32 bg-gray-50 flex items-center justify-center">
-                  <service.icon size={64} className="text-gray-900" strokeWidth={1.5} />
+                <div className="w-32 h-32 bg-graphite flex items-center justify-center">
+                  <service.icon size={64} className="text-gold" strokeWidth={1.5} />
                 </div>
               </div>
               <div className="flex-1 text-center md:text-left">
-                <h2 className="text-3xl font-semibold text-gray-900 mb-4 tracking-tight">
+                <h2 className="text-3xl font-semibold text-soft-white mb-4 tracking-tight">
                   {service.title}
                 </h2>
-                <p className="text-lg text-gray-500 leading-relaxed">
+                <p className="text-lg text-warm-gray leading-relaxed">
                   {service.description}
                 </p>
               </div>
@@ -68,7 +68,7 @@ export default function Services({ onNavigate }: ServicesProps) {
         <div className="mt-32 text-center">
           <button
             onClick={() => onNavigate('pricing')}
-            className="bg-blue-600 text-white px-10 py-4 text-base font-medium hover:bg-blue-700 transition-colors"
+            className="bg-gold text-charcoal px-10 py-4 text-base font-semibold hover:bg-bronze transition-colors"
           >
             Voir les Tarifs
           </button>

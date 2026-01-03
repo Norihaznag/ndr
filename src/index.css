@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-charcoal: #121212;
+  --color-gold: #D4AF37;
+  --color-soft-white: #F5F5F5;
+  --color-warm-gray: #B0B0B0;
+  --color-bronze: #A67C00;
+  --color-graphite: #2C2C2C;
+}
+
 @layer base {
   /* Optimize scroll behavior */
   html {
@@ -21,6 +30,7 @@
       'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    @apply bg-charcoal text-soft-white;
     /* Reduced motion support */
     @media (prefers-reduced-motion: reduce) {
       * {
@@ -33,7 +43,7 @@
 
   /* Improve focus visibility for accessibility */
   :focus-visible {
-    outline: 2px solid #0ea5e9;
+    outline: 2px solid #D4AF37;
     outline-offset: 2px;
   }
 

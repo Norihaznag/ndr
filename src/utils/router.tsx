@@ -68,10 +68,10 @@ export function updatePageMeta(pageName: string): void {
  * Loading fallback component
  */
 export const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen">
+  <div className="flex items-center justify-center min-h-screen bg-charcoal">
     <div className="animate-pulse">
-      <div className="h-12 bg-gray-200 rounded w-48 mb-4"></div>
-      <div className="h-4 bg-gray-200 rounded w-96"></div>
+      <div className="h-12 bg-gold rounded w-48 mb-4"></div>
+      <div className="h-4 bg-gold rounded w-96"></div>
     </div>
   </div>
 );
