@@ -55,7 +55,7 @@ export default function Footer() {
                 <span className="hidden sm:inline">WhatsApp</span>
               </a>
               <a
-                href="https://instagram.com/ndrmanagement1"
+                href="https://instagram.com/ndr_management01"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-warm-gray hover:text-gold transition-colors focus:outline-none focus:ring-2 focus:ring-gold rounded px-2 py-1"

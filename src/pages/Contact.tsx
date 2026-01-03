@@ -136,7 +136,7 @@ export default function Contact() {
               <span className="font-medium">WhatsApp</span>
             </a>
             <a
-              href="https://instagram.com/ndrmanagement1"
+              href="https://instagram.com/ndr_management01"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 px-8 py-4 border border-gold text-soft-white rounded-lg hover:bg-graphite transition-all duration-300 transform hover:scale-105"
