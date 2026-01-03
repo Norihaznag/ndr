@@ -44,19 +44,25 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-charcoal pt-32 pb-24">
-      <div className="max-w-2xl mx-auto px-6 lg:px-12">
+    <div className="bg-charcoal pt-32 pb-24 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-40 right-10 w-96 h-96 bg-gold opacity-5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gold opacity-5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2.5s' }}></div>
+      </div>
+      
+      <div className="max-w-2xl mx-auto px-6 lg:px-12 relative z-10">
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-semibold text-soft-white tracking-tight mb-6">
+          <h1 className="text-5xl md:text-6xl font-semibold text-soft-white tracking-tight mb-6 animate-slideDown">
             Contact
           </h1>
-          <p className="text-xl text-warm-gray">
+          <p className="text-xl text-warm-gray animate-fadeIn" style={{ animationDelay: '0.2s' }}>
             Démarrons votre projet ensemble
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-8 mb-16">
-          <div>
+        <form onSubmit={handleSubmit} className="space-y-8 mb-16 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+          <div className="group">
             <label htmlFor="name" className="block text-sm font-medium text-soft-white mb-3">
               Nom
             </label>
@@ -65,12 +71,12 @@ export default function Contact() {
               id="name"
               value={formData.name}
               onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-6 py-4 border border-graphite bg-graphite text-soft-white focus:outline-none focus:border-gold transition-colors"
+              className="w-full px-6 py-4 border border-graphite bg-graphite text-soft-white focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-50 transition-all duration-300 rounded-lg group-hover:border-gold"
               required
             />
           </div>
 
-          <div>
+          <div className="group">
             <label htmlFor="email" className="block text-sm font-medium text-soft-white mb-3">
               Email
             </label>
@@ -79,12 +85,12 @@ export default function Contact() {
               id="email"
               value={formData.email}
               onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-6 py-4 border border-graphite bg-graphite text-soft-white focus:outline-none focus:border-gold transition-colors"
+              className="w-full px-6 py-4 border border-graphite bg-graphite text-soft-white focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-50 transition-all duration-300 rounded-lg group-hover:border-gold"
               required
             />
           </div>
 
-          <div>
+          <div className="group">
             <label htmlFor="service" className="block text-sm font-medium text-soft-white mb-3">
               Service
             </label>
@@ -92,7 +98,7 @@ export default function Contact() {
               id="service"
               value={formData.service}
               onChange={(e: ChangeEvent<HTMLSelectElement>) => setFormData({ ...formData, service: e.target.value })}
-              className="w-full px-6 py-4 border border-graphite bg-graphite text-soft-white focus:outline-none focus:border-gold transition-colors"
+              className="w-full px-6 py-4 border border-graphite bg-graphite text-soft-white focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold focus:ring-opacity-50 transition-all duration-300 rounded-lg group-hover:border-gold"
               required
             >
               <option value="" className="bg-charcoal">Sélectionnez un service</option>
@@ -106,13 +112,16 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="w-full bg-gold text-charcoal px-8 py-4 text-base font-semibold hover:bg-bronze transition-colors"
+            className="w-full relative inline-block group"
           >
-            Envoyer
+            <div className="absolute inset-0 bg-gradient-to-r from-gold to-bronze rounded-lg blur-lg group-hover:blur-xl opacity-75 group-hover:opacity-100 transition-all duration-300"></div>
+            <button className="relative w-full bg-gold text-charcoal px-8 py-4 text-base font-semibold rounded-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+              Envoyer
+            </button>
           </button>
         </form>
 
-        <div className="border-t border-graphite pt-16">
+        <div className="border-t border-graphite pt-16 animate-fadeIn" style={{ animationDelay: '0.6s' }}>
           <p className="text-center text-warm-gray mb-8">
             Ou contactez-nous directement
           </p>
@@ -121,18 +130,18 @@ export default function Contact() {
               href={`https://wa.me/${phoneNumber}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 px-8 py-4 border border-gold text-soft-white hover:bg-graphite transition-colors"
+              className="group flex items-center justify-center gap-3 px-8 py-4 border border-gold text-soft-white rounded-lg hover:bg-graphite transition-all duration-300 transform hover:scale-105"
             >
-              <MessageCircle size={20} />
+              <MessageCircle size={20} className="group-hover:text-gold transition-colors" />
               <span className="font-medium">WhatsApp</span>
             </a>
             <a
               href="https://instagram.com/ndrmanagement"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-3 px-8 py-4 border border-gold text-soft-white hover:bg-graphite transition-colors"
+              className="group flex items-center justify-center gap-3 px-8 py-4 border border-gold text-soft-white rounded-lg hover:bg-graphite transition-all duration-300 transform hover:scale-105"
             >
-              <Instagram size={20} />
+              <Instagram size={20} className="group-hover:text-gold transition-colors" />
               <span className="font-medium">Instagram</span>
             </a>
           </div>
