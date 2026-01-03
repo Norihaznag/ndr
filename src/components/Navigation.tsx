@@ -43,7 +43,7 @@ export default function Navigation({ currentPage, onNavigate }: NavigationProps)
             className="text-xl font-semibold text-gold tracking-tight hover:opacity-80 transition-opacity"
             aria-label="NDR Management - Accueil"
           >
-            NDR Management
+            NDR <span className='text-sm'>Management</span>
           </button>
 
           {/* Desktop Navigation */}
