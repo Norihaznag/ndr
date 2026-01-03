@@ -2,7 +2,7 @@ import { useState, FormEvent, ChangeEvent } from 'react';
 import { Instagram, MessageCircle } from 'lucide-react';
 
 export default function Contact() {
-  const phoneNumber = import.meta.env.VITE_PHONE_NUMBER || '212000000000';
+  const phoneNumber = import.meta.env.VITE_PHONE_NUMBER || '+212777306486';
   
   const [formData, setFormData] = useState({
     name: '',
@@ -136,7 +136,7 @@ export default function Contact() {
               <span className="font-medium">WhatsApp</span>
             </a>
             <a
-              href="https://instagram.com/ndrmanagement"
+              href="https://instagram.com/ndrmanagement1"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-center gap-3 px-8 py-4 border border-gold text-soft-white rounded-lg hover:bg-graphite transition-all duration-300 transform hover:scale-105"
